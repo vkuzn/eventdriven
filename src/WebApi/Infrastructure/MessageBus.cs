@@ -26,7 +26,7 @@ namespace WebApi.Infrastructure
 
         public void Publish( StatusCodeChecked msg )
         {
-            _statusCodeChecked.Invoke( this, msg );
+            _statusCodeChecked?.Invoke( this, msg );
         }
 
         public void Subscribe( IEventListener<ResourceCreated> listener )
